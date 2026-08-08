@@ -1,1 +1,244 @@
+ Time-Based Assessment Validation Flaw
+ Domain:"confedential".etutor.co
 
+> Security research conducted during an authorized assessment of a web-based examination platform.
+
+ Overview
+
+During an authorized security assessment of a web-based examination platform, I identified an inconsistency in the server-side validation of assessment timing.
+
+The application initially identified an assessment as expired and displayed a remaining duration of `0 Minutes`. The server also returned a negative remaining-time value and triggered an expiration warning.
+
+During further analysis of the application's time-validation requests and responses, I observed that the same assessment could subsequently return a positive remaining-time value. The application then allowed the assessment interface to become accessible again.
+
+This indicates a potential weakness in the enforcement of time-based access controls.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Vulnerability Classification
+| Vulnerability Type | Improper Time-Based Access Control / Time Validation Flaw |
+| OWASP Category | A01: Broken Access Control |
+| Attack Surface | Online Assessment / Examination Session |
+| Affected Function | Assessment remaining-time validation |
+| Severity : Medium
+| Authentication Required : Yes |
+| Required Access : Authorized assessment account |
+| Potential Impact | Continuation of an assessment after its intended expiration |
+
+The final severity should be determined by the affected application's security team after confirming the complete impact and exploitability.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. Initial Observation
+
+The assessment dashboard displayed an assessment with a `MISSED` status.
+
+![Assessment Dashboard](./images/01-dashboard.png)
+
+The assessment was subsequently accessed and the test information page displayed:
+
+{
+Questions: 75
+Duration: 180 Minutes
+Remaining Duration: 0 Minutes
+}
+
+The application also displayed a warning indicating that the examination could not be started because the user was late.
+
+At this stage, the expected behaviour was that the server would consistently consider the assessment expired and prevent further access.
+
+2. HTTP Request Analysis
+
+I inspected the application's network traffic using an HTTP interception proxy.
+
+The application issued a request to the following endpoint:
+
+[POST /getTestRemainingTime.php]
+
+The request contained parameters associated with the assessment and authenticated session.
+
+A representative request structure was:
+{
+tid=<REDACTED>&user_test_id=<REDACTED>
+}
+Sensitive authentication information and identifiers have been redacted from the publicly available evidence.
+Expired-State Response
+
+The server initially returned a response indicating that the assessment had expired.
+
+A representative response was:
+
+{
+  "user_spend_time": 0,
+  "test_rem_time": -182201,
+  "exclude_time": 182381,
+  "show_alert": true,
+  "rem_time": -182201
+}
+
+The relevant values were:
+
+test_rem_time = -182201
+rem_time      = -182201
+show_alert    = true
+
+A negative remaining-time value is consistent with the application's expired-assessment state.
+
+The negative remaining-time value was also visible in the intercepted server response.
+4. Inconsistent Time Validation
+
+During further testing, I observed a subsequent response from the same time-validation mechanism in which the remaining-time value was positive.
+
+The response was:
+
+{
+  "user_spend_time": 0,
+  "test_rem_time": 182202,
+  "exclude_time": 18238,
+  "show_alert": false,
+  "rem_time": 182202
+}
+
+The important state changes were:
+
+show_alert:
+
+true
+ ↓
+false
+
+and:
+
+rem_time:
+
+-182201
+ ↓
+182202
+
+This represents a significant inconsistency because the application had previously determined that the assessment was already expired.
+
+5. Assessment Became Accessible
+
+After the time-validation state changed, the assessment interface became accessible and displayed a positive amount of remaining time.
+
+This demonstrates that the time-validation result was capable of influencing whether the assessment could be accessed.
+
+The important security concern is not simply that a timer displayed an incorrect value.
+
+The concern is that the server-side time state appeared to change from an expired condition to an active condition, allowing the assessment workflow to continue.
+6. Technical Analysis
+
+The observed behaviour suggests that the application's time-based access-control mechanism may not be enforcing a single authoritative expiration state.
+
+A secure implementation should determine the validity of an assessment using trusted server-side information.
+
+Conceptually:
+
+                 Server Current Time
+                         |
+                         v
+              Assessment Expiration Time
+                         |
+              +----------+----------+
+              |                     |
+              v                     v
+           Expired                Active
+              |                     |
+              v                     v
+        Reject access          Allow access
+
+
+Once the server determines that an assessment has expired, subsequent requests should continue to enforce that expired state.
+
+The observed behaviour instead showed:
+
+Assessment
+   |
+   v
+Expired
+   |
+   | Server reports negative time
+   v
+Expired state
+   |
+   | Subsequent validation
+   v
+Positive remaining time
+   |
+   v
+Assessment becomes accessible
+
+11. Evidence
+
+The following screenshots document the observed behaviour:
+
+File	Evidence
+01-dashboard.png	Assessment dashboard showing the assessment state
+02-test-details.png	Assessment information showing zero remaining duration
+03-time-request.png	HTTP request used for time validation
+04-late-warning.png	Application warning indicating that the user was late
+05-negative-time-response.png	Server response containing negative remaining time
+06-time-validation-response.png	Subsequent server response containing positive remaining time
+07-test-access.png	Assessment interface becoming accessible
+
+13. Responsible Disclosure
+
+This research was conducted within the scope of an authorized security assessment.
+
+Testing was limited to the authorized account and assessment environment available to me.
+
+No attempt was made to:
+
+Access another user's account
+Access another user's assessment
+Modify another user's data
+Perform destructive actions
+Perform denial-of-service testing
+Extract unrelated sensitive information
+
+The purpose of the research was to identify and document a potential security weakness and provide information that can help improve the platform's security.
+
+Public disclosure of target-specific information should only be performed when permitted by the relevant organization's assessment agreement or vulnerability disclosure policy.
+14. Security Principles Demonstrated
+
+This research demonstrates several important web application security principles.
+
+Server-side enforcement
+
+Security decisions must be enforced by the backend.
+
+Client-side controls are not security boundaries
+
+A browser timer or JavaScript variable should never be considered sufficient protection for a security-sensitive time restriction.
+
+Authoritative time
+
+Time-based authorization should use a trusted server-side clock.
+
+Consistent state management
+
+Security-sensitive state transitions must be validated by the backend.
+
+HTTP request analysis
+
+Inspecting application requests and responses can reveal security-relevant behaviour that may not be visible through the normal user interface.
+
+Secure evidence handling
+
+Security research should be documented without exposing authentication credentials, session tokens, or unnecessary personal information.
+
+15. Tools Used
+Burp Suite
+Google Chrome DevTools
+Browser Network Inspector
+HTTP Request/Response Analysis
+Manual Web Application Security Testing
+
+Researcher:
+
+Dhashwin G
+
+Cybersecurity Student
+Web Application Security | Security Research | Vulnerability Analysis
+
+GitHub Portfolio:
+
+https://github.com/Dhashwin-G/cybersecurity-portfolio
