@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhashwin G — Cybersecurity Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Nav */
+        header {
+            background: rgba(15, 15, 30, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #00d4ff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 30px rgba(0, 212, 255, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #00d4ff;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #a0a0a0;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            color: #00d4ff;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
+            color: #000;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 212, 255, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #00d4ff;
+            border: 2px solid #00d4ff;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        .about {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: #c0c0c0;
+            margin-bottom: 1rem;
+        }
+
+        .emoji-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .emoji-card {
+            background: rgba(168, 85, 247, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .emoji-card:hover {
+            background: rgba(0, 212, 255, 0.15);
+            transform: translateY(-5px);
+            border-color: #00d4ff;
+        }
+
+        .emoji-card .emoji {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .emoji-card p {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%);
+            padding: 4rem 2rem;
+        }
+
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skills-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: rgba(15, 15, 30, 0.8);
+            border: 2px solid rgba(0, 212, 255, 0.2);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            background: rgba(15, 15, 30, 0.95);
+            border-color: #00d4ff;
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.2);
+            transform: translateY(-10px);
+        }
+
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #00d4ff;
+        }
+
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: rgba(168, 85, 247, 0.3);
+            color: #e0e0e0;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(168, 85, 247, 0.5);
+        }
+
+        /* Tools Section */
+        .tools {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .tools h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-item {
+            background: rgba(168, 85, 247, 0.1);
+            border: 2px solid rgba(0, 212, 255, 0.2);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tool-item:hover {
+            background: rgba(0, 212, 255, 0.15);
+            border-color: #00d4ff;
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        .tool-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tool-item p {
+            font-size: 0.95rem;
+            color: #c0c0c0;
+        }
+
+        /* Certifications Section */
+        .certifications {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%);
+            padding: 4rem 2rem;
+        }
+
+        .certifications-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .certifications-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-card {
+            background: rgba(15, 15, 30, 0.8);
+            border-left: 4px solid #00d4ff;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateX(10px);
+            background: rgba(15, 15, 30, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .cert-card h3 {
+            color: #00d4ff;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-card p {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+        }
+
+        /* Platforms Section */
+        .platforms {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .platforms h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .platform-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .platform-card {
+            background: rgba(168, 85, 247, 0.1);
+            border: 2px solid rgba(0, 212, 255, 0.2);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .platform-card:hover {
+            border-color: #00d4ff;
+            background: rgba(0, 212, 255, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.2);
+        }
+
+        .platform-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .platform-card h3 {
+            color: #00d4ff;
+            margin-bottom: 0.5rem;
+        }
+
+        .platform-card p {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .platform-link {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .platform-link:hover {
+            gap: 0.5rem;
+        }
+
+        /* Fun Fact Section */
+        .fun-facts {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .fun-facts-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .fun-facts-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .fun-fact-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .fact-item {
+            background: rgba(15, 15, 30, 0.8);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid #a855f7;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .fact-item:hover {
+            border-left-color: #00d4ff;
+            transform: translateY(-5px);
+        }
+
+        .fact-item .emoji {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .fact-item p {
+            color: #c0c0c0;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(15, 15, 30, 0.95);
+            border-top: 2px solid #00d4ff;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 212, 255, 0.2);
+            border: 2px solid #00d4ff;
+            color: #00d4ff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .social-btn:hover {
+            background: #00d4ff;
+            color: #0f0f1e;
+            transform: scale(1.1);
+        }
+
+        footer p {
+            color: #a0a0a0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content h2 {
+                font-size: 2rem;
+            }
+
+            .skills-container h2,
+            .tools h2,
+            .certifications-container h2,
+            .platforms h2,
+            .fun-facts-container h2 {
+                font-size: 2rem;
+            }
+
+            .emoji-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .skill-card {
+            animation: fadeInUp 0.8s ease backwards;
+        }
+
+        .skill-card:nth-child(1) { animation-delay: 0.1s; }
+        .skill-card:nth-child(2) { animation-delay: 0.2s; }
+        .skill-card:nth-child(3) { animation-delay: 0.3s; }
+        .skill-card:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">🔐 Dhashwin G</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#platforms">Platforms</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>I Break Things (Legally)</h1>
+            <p class="hero-subtitle">🎯 Cybersecurity Researcher | Penetration Tester | Security Enthusiast</p>
+            <p class="hero-tagline">"Show me your system, I'll show you your vulnerabilities 😄"</p>
+            
+            <div class="cta-buttons">
+                <a href="#platforms" class="btn btn-primary">🚀 Explore My Work</a>
+                <a href="#contact" class="btn btn-secondary">💬 Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>About Me 🎓</h2>
+            <p>From India, obsessed with understanding how systems fail (so you can fix them before they do).</p>
+            <p>I practice through hands-on labs, capture the flags, vulnerability research, and LOTS of coffee ☕</p>
+            <p><strong>Philosophy:</strong> Understand it. Test it. Break it. Fix it. Document it.</p>
+        </div>
+        <div class="emoji-grid">
+            <div class="emoji-card">
+                <div class="emoji">🌐</div>
+                <p><strong>Web Security</strong><br>SQLi, XSS, IDOR</p>
+            </div>
+            <div class="emoji-card">
+                <div class="emoji">🔎</div>
+                <p><strong>Reconnaissance</strong><br>Surface mapping</p>
+            </div>
+            <div class="emoji-card">
+                <div class="emoji">🛡️</div>
+                <p><strong>Testing</strong><br>Vulnerability assessment</p>
+            </div>
+            <div class="emoji-card">
+                <div class="emoji">📝</div>
+                <p><strong>Reporting</strong><br>Clear documentation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="skills-container">
+            <h2>🔧 Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>🕸️ Web Security</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">SQL Injection</span>
+                        <span class="skill-tag">XSS</span>
+                        <span class="skill-tag">IDOR</span>
+                        <span class="skill-tag">Auth Testing</span>
+                        <span class="skill-tag">Input Validation</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>🌍 Networking</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Nmap</span>
+                        <span class="skill-tag">TCP/IP</span>
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Port Analysis</span>
+                        <span class="skill-tag">Reconnaissance</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>🐧 Linux & Systems</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Kali Linux</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">Linux CLI</span>
+                        <span class="skill-tag">System Hardening</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>🐍 Programming</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Scripting</span>
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">Networking Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools" id="tools">
+        <h2>🛠️ Arsenal</h2>
+        <div class="tools-grid">
+            <div class="tool-item">
+                <div class="tool-icon">🎯</div>
+                <p><strong>Burp Suite</strong></p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon">🔍</div>
+                <p><strong>Nmap</strong></p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon">📊</div>
+                <p><strong>Wireshark</strong></p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon">💉</div>
+                <p><strong>SQLMap</strong></p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon">📱</div>
+                <p><strong>WPScan</strong></p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon">🗺️</div>
+                <p><strong>Gobuster</strong></p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon">🔎</div>
+                <p><strong>Subfinder</strong></p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon">📡</div>
+                <p><strong>HTTPx</strong></p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon">🖥️</div>
+                <p><strong>Kali Linux</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certifications">
+        <div class="certifications-container">
+            <h2>🎖️ Achievements</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <h3>🏆 In Progress</h3>
+                    <p>Building real-world experience through CTFs, labs, and security research. Every hack is a step toward mastery!</p>
+                </div>
+                <div class="cert-card">
+                    <h3>🧪 Lab Badges</h3>
+                    <p>TryHackMe rooms cleared, HackTheBox challenges conquered. The journey continues! 🚀</p>
+                </div>
+                <div class="cert-card">
+                    <h3>📊 Skill Growth</h3>
+                    <p>Daily practice on security platforms. Constantly learning, constantly improving. Never stop growing! 📈</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Platforms -->
+    <section class="platforms" id="platforms">
+        <h2>🎮 Practice Platforms</h2>
+        <div class="platform-cards">
+            <div class="platform-card">
+                <div class="icon">🟠</div>
+                <h3>TryHackMe</h3>
+                <p>Learning security through interactive labs & CTF challenges</p>
+                <a href="https://tryhackme.com/p/Dhashwin" target="_blank" class="platform-link">Visit Profile →</a>
+            </div>
+            <div class="platform-card">
+                <div class="icon">🟦</div>
+                <h3>Hack The Box</h3>
+                <p>Real-world penetration testing scenarios and challenges</p>
+                <a href="https://www.hackthebox.com" target="_blank" class="platform-link">Explore HTB →</a>
+            </div>
+            <div class="platform-card">
+                <div class="icon">🐙</div>
+                <h3>GitHub</h3>
+                <p>My security tools, scripts, research & documentation</p>
+                <a href="https://github.com/Dhashwin-G" target="_blank" class="platform-link">View Projects →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section class="fun-facts">
+        <div class="fun-facts-container">
+            <h2>💡 Fun Facts About Me</h2>
+            <div class="fun-fact-items">
+                <div class="fact-item">
+                    <div class="emoji">☕</div>
+                    <p>I consume coffee proportional to the number of vulnerabilities I find</p>
+                </div>
+                <div class="fact-item">
+                    <div class="emoji">🔐</div>
+                    <p>My passwords have more entropy than my sleep schedule</p>
+                </div>
+                <div class="fact-item">
+                    <div class="emoji">🎯</div>
+                    <p>I practice responsible disclosure (unlike script kiddies)</p>
+                </div>
+                <div class="fact-item">
+                    <div class="emoji">🚀</div>
+                    <p>Every day is an opportunity to learn something new... or find a new bug</p>
+                </div>
+                <div class="fact-item">
+                    <div class="emoji">🧩</div>
+                    <p>CTF brain turned on. Regular brain permanently off. 😄</p>
+                </div>
+                <div class="fact-item">
+                    <div class="emoji">🛡️</div>
+                    <p>I take cybersecurity seriously, myself... not so much</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h3 style="margin-bottom: 1.5rem; color: #00d4ff;">Get In Touch 📬</h3>
+            <div class="footer-links">
+                <a href="https://github.com/Dhashwin-G" target="_blank">🐙 GitHub</a>
+                <a href="https://tryhackme.com/p/Dhashwin" target="_blank">🟠 TryHackMe</a>
+                <a href="mailto:hello@dhashwin.com" target="_blank">📧 Email</a>
+                <a href="https://linkedin.com" target="_blank">💼 LinkedIn</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/Dhashwin-G" class="social-btn" target="_blank" title="GitHub">🐙</a>
+                <a href="https://tryhackme.com/p/Dhashwin" class="social-btn" target="_blank" title="TryHackMe">🟠</a>
+                <a href="mailto:hello@dhashwin.com" class="social-btn" target="_blank" title="Email">✉️</a>
+            </div>
+            <p>© 2026 Dhashwin G | Cybersecurity Researcher | Breaking things responsibly 🔐</p>
+            <p style="font-size: 0.9rem; margin-top: 1rem; color: #707070;">
+                "I don't crash systems. I find why they might crash and tell you how to prevent it." 😎
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-card, .tool-item, .cert-card, .platform-card, .fact-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
