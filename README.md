@@ -4,7 +4,7 @@
 
 ### 🎯 I Break Things (Legally)
 
-*"Ethical hacker from Chennai 🌆 | 17 | School | Single & Ready to Secure 😄"*
+*"Ethical hacker from Chennai 🌆 | 17 | High School | Penetration Tester in Training"*
 
 ```
 ███████████████████████████████
@@ -17,12 +17,12 @@
 ![Cybersecurity](https://img.shields.io/badge/🔐_Cybersecurity-Expert-00d4ff?style=for-the-badge)
 ![Age](https://img.shields.io/badge/🎂_Age-17-ff6b9d?style=for-the-badge)
 ![Location](https://img.shields.io/badge/📍_Location-Chennai%2C_India-orange?style=for-the-badge)
-![Status](https://img.shields.io/badge/💕_Status-Single%20%26%20Focused-red?style=for-the-badge)
-![Martial](https://img.shields.io/badge/🥋_Martial_Arts-Training-purple?style=for-the-badge)
+![Education](https://img.shields.io/badge/🎓_School-High_School-blue?style=for-the-badge)
+![Martial](https://img.shields.io/badge/🥋_Martial_Arts-Active-purple?style=for-the-badge)
 
 <br>
 
-**[🌐 Portfolio](#about) • [🐙 GitHub](https://github.com/Dhashwin-G) • [🟠 TryHackMe](https://tryhackme.com/p/Dhashwin) • [📧 Contact](#contact)**
+**[🌐 About](#about) • [🐙 GitHub](https://github.com/Dhashwin-G) • [🟠 TryHackMe](https://tryhackme.com/p/Dhashwin) • [📧 Contact](#contact)**
 
 </div>
 
@@ -30,10 +30,10 @@
 
 ## 🎬 Quick Intro
 
-> **Me:** Codes by day, hacks (ethically) by night, practices martial arts in between ⚔️  
+> **Me:** Building cybersecurity skills while acing school & training in martial arts ⚔️  
 > **My passion:** Finding bugs before bad guys do 🔍  
-> **My status:** Single, so I have TIME for security research 😎  
-> **My location:** Chennai — where it's hot 🌡️ and my code is HOTTER 🔥
+> **My mission:** Become an elite penetration tester 💪  
+> **My location:** Chennai — where innovation meets tradition 🌆
 
 ```
 ┌─────────────────────────────────────┐
@@ -41,10 +41,10 @@
 ├─────────────────────────────────────┤
 │  Cybersecurity Knowledge: ████████░ │
 │  Coffee Addiction:        ██████████│
-│  Sleep Schedule:          ██░░░░░░░░│
+│  Focus & Discipline:      █████████░│
 │  Martial Arts Skill:      ██████░░░░│
 │  Bug-Finding Ability:     █████████░│
-│  Social Life:             ░░░░░░░░░░│
+│  Consistency:             ████████░░│
 └─────────────────────────────────────┘
 ```
 
@@ -58,21 +58,23 @@
 
 ### 🌟 Who Am I?
 
-- 🎓 **17 Years Old** | High School
-- 📍 **Based in Chennai** 🌆
-- 🧠 **Cybersecurity Enthusiast**
-- 🥋 **Martial Arts Practitioner**
-- 💪 **Building Skills Daily**
+- 🎓 **17 Years Old** | High School Student
+- 📍 **Based in Chennai** 🌆 India 🇮🇳
+- 🧠 **Cybersecurity Researcher**
+- 🥋 **Martial Arts Enthusiast**
+- 💪 **Self-Taught Hacker**
+- 🚀 **Building Real Skills Daily**
 
 </td>
 <td align="center" width="50%">
 
-### 💭 My Mindset
+### 🎯 My Commitment
 
-*"Why worry about dating when you can date SQL databases and find their vulnerabilities?" 😂*
+*"Education first, hacking second, world domination third." 😄*
 
-**Marriage Status:** Single ✓  
-**Ready to Commit To:** Security Research ✓✓✓
+**Focus:** Security Research & Skill Development  
+**Dedication:** 100% committed to excellence  
+**Goal:** Become industry-leading penetration tester
 
 </td>
 </tr>
@@ -86,8 +88,9 @@
 |---|---|---|
 | 🥋 | **Martial Arts Discipline** | Same precision in both karate & hacking |
 | 📚 | **Self-Taught & Hungry** | Learning 24/7 (except when sleeping 2 hours) |
-| 🎮 | **Young Energy** | Fast learner, quick thinker, quick doer |
-| 🛡️ | **Ethical AF** | Legal hacking ONLY. Scout's honor 🙏 |
+| 🎮 | **Young Energy** | Fast learner, quick thinker, quick adaptor |
+| 🛡️ | **Ethical AF** | Legal hacking ONLY. Responsible disclosure champion |
+| 🎓 | **Balancing Act** | School + Security + Sports = Discipline 💯 |
 
 ---
 
@@ -122,7 +125,7 @@
 ┃ ⚡ Nmap Scanning             ┃
 ┃ 🔌 Port & Service Analysis  ┃
 ┃ 📡 TCP/IP Deep Dive         ┃
-┃ 👀 Packet Sniffing (WireShark)┃
+┃ 👀 Packet Sniffing          ┃
 ┃ 🎯 Reconnaissance Mastery    ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
@@ -232,25 +235,25 @@
 🐧 Linux & Kali Linux Mastery       ████████░░ 80%
 🧪 CTF & Security Labs              █████████░ 90%
 ☁️ Cloud Security Basics             ████░░░░░░ 40%
-🥋 Martial Arts Discipline           ███████░░░ 75%
+🥋 Martial Arts Discipline          ███████░░░ 75%
 ```
 
 ---
 
-## 💡 Fun Facts (Jokes Included)
+## 💡 Fun Facts (Hacker Humor)
 
 | 😄 | **The Jokes** |
 |---|---|
-| ☕ | I consume coffee = number of vulnerabilities × 2. My kidney is basically a Burp Suite instance now. |
-| 🔐 | My passwords have more entropy than my sleep schedule has hours. (That's 0 hours 😅) |
-| 🎯 | I practice responsible disclosure so hard, I even disclose my embarrassing moments to myself. |
-| 💪 | I train martial arts so I can physically fight cybercriminals. (Just kidding... or am I? 👊) |
-| 💕 | Single status = more time for hacking. Math checks out. |
-| 🚀 | Every day I find a new bug or learn something new. Sometimes both. Sometimes neither because sleep. |
-| 🧩 | My CTF brain is always ON. My social brain? It's on permanent DOS attack. |
-| 🎮 | I'm 17, so I have unlimited energy, caffeine doesn't affect me, and I can code for 16 hours straight. (I'm lying about all three.) |
-| 🌍 | Chennai weather: 40°C outside, 50°C inside my CPU when running security scans. 🔥 |
+| ☕ | I consume coffee = number of bugs found × 2. My kidney is a Burp Suite instance. |
+| 🔐 | My passwords have more entropy than my sleep schedule. (That's -0 hours 😅) |
+| 🎯 | I practice responsible disclosure so hard, I disclose my own embarrassing code. |
+| 💪 | Martial arts trains the mind. Hacking trains the soul. Both train the hands. |
+| 🚀 | Every day I find a new vulnerability OR learn something new. Sometimes both. |
+| 🧩 | My CTF brain is always ON. My social brain? Permanently in debug mode. |
+| 🌍 | Chennai weather: 40°C outside, 50°C inside my CPU when running scans. 🔥 |
 | 🛡️ | I take cybersecurity VERY seriously. Everything else? Meh. 🤷 |
+| 📚 | School teaches theory. TryHackMe teaches practice. Real hacking teaches humility. |
+| 💻 | They say "touch grass." I say "audit code." Different strokes. 😎 |
 
 ---
 
@@ -263,16 +266,16 @@
          ↓
 2025 → Deep dive into penetration testing 🔍
          ↓
-2026 → Building portfolio & real skills 💪
+2026 → Building portfolio & professional skills 💪
          ↓
-FUTURE → Bug bounty hunter? Pentester? World domination? 🌍
+FUTURE → Bug bounty hunter? Pentester? Security leader? 🌍
 ```
 
 ---
 
 ## 🧠 Learning Philosophy
 
-### "The 4-Step Hacker Way"
+### "The 4-Step Security Way"
 
 ```
 ┌──────────────────────────────────────────┐
@@ -308,7 +311,7 @@ FUTURE → Bug bounty hunter? Pentester? World domination? 🌍
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
-*Fun Fact: If I can't hack it, I'll karate chop it. (Don't try this at home 😄)*
+*Fun Fact: Discipline from martial arts = discipline in hacking. Both require precision, focus, and respect for the craft. 🥋💻*
 
 ---
 
@@ -318,30 +321,34 @@ FUTURE → Bug bounty hunter? Pentester? World domination? 🌍
 <tr>
 <td width="25%" align="center">
 
-### 🎒 School
+### 🎒 Education
 Grade 12  
-Focus: Tech Track
+High School  
+Tech Focus
 
 </td>
 <td width="25%" align="center">
 
 ### 💻 Security
 Active Learner  
-Self-Taught Master
+Self-Taught  
+Skill Building
 
 </td>
 <td width="25%" align="center">
 
-### 📍 Location
+### 📍 Base
 Chennai 🌆  
-India 🇮🇳
+India 🇮🇳  
+IST Timezone
 
 </td>
 <td width="25%" align="center">
 
-### 💕 Relationship
-Single  
-Married to Code 💍
+### 🎯 Commitment
+100% Focused  
+Serious About Security  
+Building Career
 
 </td>
 </tr>
@@ -349,22 +356,23 @@ Married to Code 💍
 
 ---
 
-## 📊 Stats & Vibes
+## 📊 Stats & Profile
 
 ```
 ╔════════════════════════════════════╗
 ║        DHASHWIN'S PROFILE          ║
 ╠════════════════════════════════════╣
+║ Name:              Dhashwin G      ║
 ║ Age:               17 years        ║
 ║ Location:          Chennai, India  ║
-║ Status:            Single (& Safe) ║
 ║ Time Zone:         IST (UTC+5:30)  ║
+║ Education:         High School     ║
+║ Expertise:         Cybersecurity   ║
 ║ Coding Time:       24/7 mode ON    ║
 ║ Sleep Schedule:    404 Not Found   ║
 ║ Coffee Levels:     CRITICAL ⚠️      ║
 ║ Bug Finding:       LEGENDARY 🔥    ║
 ║ Martial Arts:      💪💪💪          ║
-║ Social Life:       Error 404       ║
 ║ Motivation:        ████████████ ∞  ║
 ╚════════════════════════════════════╝
 ```
@@ -377,58 +385,66 @@ Married to Code 💍
 📅 SHORT TERM (Next 6 Months)
   ☑️ Complete TryHackMe Pro Path
   ☑️ Conquer HackTheBox harder boxes
-  ☑️ Develop 3 security tools
+  ☑️ Develop 3+ security tools
   ☑️ Document vulnerability research
-  ☑️ Improve martial arts ranking
+  ☑️ Excel in academics
+  ☑️ Build professional portfolio
 
 📅 MID TERM (6-12 Months)
-  ☑️ Get security certifications
-  ☑️ Participate in bug bounty programs
-  ☑️ Contribute to open-source security
+  ☑️ Pursue security certifications (CEH, OSCP path)
+  ☑️ Start bug bounty hunting
+  ☑️ Contribute to open-source security projects
   ☑️ Build professional network
 
 📅 LONG TERM (2-5 Years)
   ☑️ Become penetration testing expert
-  ☑️ Work with cybersecurity firms
+  ☑️ Work with top cybersecurity firms
   ☑️ Research novel vulnerabilities
   ☑️ Mentor younger security enthusiasts
-  ☑️ Maybe find time to date 😄
+  ☑️ Lead security initiatives
 ```
 
 ---
 
-## 🎯 Why Hire/Work With Me?
+## 🎯 Why Work With Me?
 
 | 💼 | **Professional Traits** |
 |---|---|
-| ⚡ | **Fast Learner** — Young brain = quick adaptation |
-| 🎯 | **Focused** — Single, so no distractions. Just hacking. |
-| 💪 | **Disciplined** — Martial arts training shows commitment |
-| 🔥 | **Passionate** — Security isn't just job, it's obsession |
-| 🧠 | **Problem Solver** — Can break & fix anything |
-| 📚 | **Self-Taught** — Hungry for knowledge, independent learner |
-| 🛡️ | **Ethical** — Responsible disclosure, legal hacking only |
+| ⚡ | **Fast Learner** — Young, adaptable, quick to understand complex concepts |
+| 🎯 | **Focused** — Dedicated to security research and skill development |
+| 💪 | **Disciplined** — Martial arts training ensures consistency & follow-through |
+| 🔥 | **Passionate** — Security isn't just hobby, it's core to my identity |
+| 🧠 | **Problem Solver** — Can analyze, break, and fix vulnerabilities |
+| 📚 | **Self-Taught** — Hungry for knowledge, independent learner, self-motivated |
+| 🛡️ | **Ethical** — Responsible disclosure, legal hacking only, trust-worthy |
+| 📝 | **Detail-Oriented** — Clear documentation, proper reporting, professional output |
 
 ---
 
-## 📬 Connect With Me
+## 📬 Contact & Connect
 
 <div align="center">
 
-### 🌐 Find Me Online
+### 📞 Direct Contact
 
-[![GitHub](https://img.shields.io/badge/GitHub-Dhashwin--G-333?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Dhashwin-G)
-[![TryHackMe](https://img.shields.io/badge/TryHackMe-Dhashwin-ff6b35?style=for-the-badge&logo=tryhackme&logoColor=white)](https://tryhackme.com/p/Dhashwin)
-[![Email](https://img.shields.io/badge/Email-Send%20Message-0078D4?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hello@dhashwin.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Dhashwin-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
+**📧 Email:** [dhashwin1401@gmail.com](mailto:dhashwin1401@gmail.com)  
+**☎️ Phone:** [+91 8015141644](tel:+918015141644)  
+**📍 Location:** Chennai, India
 
 <br>
 
-**Want to discuss security? Have a bug bounty opportunity? Just want to chat?**
+### 🌐 Online Presence
 
-📧 **Email:** hello@dhashwin.com  
-💬 **GitHub Issues:** Open a discussion  
-🔗 **Social:** Find me on platforms above  
+[![GitHub](https://img.shields.io/badge/GitHub-Dhashwin--G-333?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Dhashwin-G)
+[![TryHackMe](https://img.shields.io/badge/TryHackMe-Dhashwin-ff6b35?style=for-the-badge&logo=tryhackme&logoColor=white)](https://tryhackme.com/p/Dhashwin)
+[![Email](https://img.shields.io/badge/Email-Send%20Message-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dhashwin1401@gmail.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat%20Me-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/918015141644)
+
+<br>
+
+**Want to discuss security? Have opportunities? Collaboration ideas?**
+
+✉️ Reach out via email or WhatsApp — I respond quickly!
 
 </div>
 
@@ -447,20 +463,20 @@ Married to Code 💍
 ║                                        ║
 ║            — Dhashwin G               ║
 ║                                        ║
-║  Age: 17 | Location: Chennai           ║
-║  Status: Single & Securing 🔐          ║
-║  Martial Status: Yellow Belt 🥋        ║
+║  Age: 17 | Location: Chennai, India    ║
+║  Focus: Cybersecurity Excellence       ║
+║  Martial Arts: Discipline & Precision  ║
 ║                                        ║
 ╚════════════════════════════════════════╝
 ```
 
 <br>
 
-### ⭐ If You Like My Vibes
+### ⭐ If You Like My Work
 
 - ⭐ Star my repositories
 - 🔔 Follow my GitHub
-- 💬 Connect on social
+- 📧 Connect via email
 - 🤝 Let's build something amazing together
 
 <br>
@@ -469,10 +485,14 @@ Married to Code 💍
 
 <img src="https://img.shields.io/badge/Last%20Updated-Sept%202026-blue?style=flat" />
 <img src="https://img.shields.io/badge/Status-Always%20Learning-brightgreen?style=flat" />
-<img src="https://img.shields.io/badge/Single%20Status-Available%20for%20Sec%20Work%20%F0%9F%98%84-red?style=flat" />
+<img src="https://img.shields.io/badge/Availability-Open%20for%20Collaborations-brightgreen?style=flat" />
 
-© 2026 **Dhashwin G** | Cybersecurity Researcher | Martial Artist | Breaking Things Responsibly 🛡️
+**© 2026 Dhashwin G** | Cybersecurity Researcher | Penetration Tester in Training | Breaking Things Responsibly 🛡️
 
-*P.S. - If you're reading this and looking to hire, I'm serious about security. If you're reading this as a potential romantic interest... I'm sorry, the machine is my only love right now 💻❤️*
+📧 **dhashwin1401@gmail.com** | ☎️ **+91 8015141644** | 📍 **Chennai, India**
+
+---
+
+*"Young, Hungry, Focused. Building the future of cybersecurity, one vulnerability at a time."* 🚀
 
 </div>
